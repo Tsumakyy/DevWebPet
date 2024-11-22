@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../view/img/assinaturabackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.container {
+    width: 1300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between; 
+    color: white;
+}
+
+.container .card {
+    width: 400px;
+    height: 600px;
+    padding: 10px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #a7994d 0%, #4a60b1 100%);
+    border-radius: 15px;
+    box-shadow: 2px 5px 15px black;
+    transition: transform 0.3s;
+    margin: 10px;
+}
+
+
+.container .card:hover {
+    transform: scale(1.05);
+}
+
+.container .card .card-title {
+    padding: 30px 20px;
+    border-bottom: 2px solid gray;
+}
+
+.container .card .card-title h2 {
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: yellow;
+}
+
+.container .card .card-title p span {
+    font-size: 40px;
+    padding: 0 5px;
+}
+
+.container .card .card-content ul {
+    padding: 10px 30px;
+    padding-bottom: 20px;
+}
+
+.container .card .card-content ul li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.container .card .card-content button {
+    width: 120px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .card .card-content button:hover {
+    background: #17ead9;
+    letter-spacing: 1.2px;
+}
+
+.container .card .card-content button a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.header{      
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 10px 100px;
+    background: #1f232c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
+
+}
+
+.logo{      
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{      
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{     
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #cfe1eb;
+    transition: 0.3s;
+}
+
+
+
+.navbar a:hover::before{    
+    width: 100%;
+
+}
+
+.header .botao button{
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.header .botao .cadastrar{
+    background-color: #eeeded;
+    color: #000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .cadastrar:hover{
+    background-color: #534806;
+    color: #ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar{
+    background-color: #eeeded;
+    color:#000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar:hover{
+    background-color: #534806;
+    color:#ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}

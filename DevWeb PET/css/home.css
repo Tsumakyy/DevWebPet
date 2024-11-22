@@ -1,0 +1,110 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1531824475211-72594993ce2a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.container {
+    display: grid;        
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;             
+    padding: 96px 20px 20px;
+    padding-left: 100px;
+}
+
+
+.Profile-Card {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(228, 221, 211);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: auto;
+    height: 100vh;
+    font-size: 1.5em;
+    line-height: 2.0;
+}
+
+
+.Obras {
+    display: flex; 
+    justify-content: relative; 
+    align-items: center; 
+    height: 100vh; 
+    padding-left: 300px; 
+    white-space: nowrap;
+    height: 100vh;
+    width: 100vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
+
+.imagem {
+    width: 100px;               
+    height: auto;              
+    border-radius: 50%;         
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+.modal {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+    width: 300px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Obras h1 {
+    background-color: rgba(202, 181, 142, 0.7);
+    padding: 10px;
+    color: #333;
+}
+
+.Obras li {
+    background-color: rgba(202, 181, 142, 0.7);
+    padding: 5px;
+    color: #333;
+}

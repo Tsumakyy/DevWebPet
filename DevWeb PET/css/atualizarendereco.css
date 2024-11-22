@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Varela Round;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 90%; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 13vh;
+}
+
+#titulo_endereco {
+    font-size: 24px;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid;
+}
+
+th {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: left;
+    padding: 8px 12px; 
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid;
+}
+
+
+td {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #fff;
+    border: 1px solid;
+}
+
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+
+tr:hover td {
+    background-color: #e9f7e5;
+}
+
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 4px;
+    font-size: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+    background-color: #336cb6;
+    transform: scale(1.05);
+}
+
+input[type="button"]:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px; 
+    }
+
+    #titulo_endereco {
+        font-size: 20px;
+    }
+}
+
+
+
+.header{      
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 10px 100px;
+    background: #1f232c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
+
+}
+
+.logo{      
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{      
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{     
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #cfe1eb;
+    transition: 0.3s;
+}
+
+
+
+.navbar a:hover::before{    
+    width: 100%;
+
+}
+
+.header .botao button{
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.header .botao .cadastrar{
+    background-color: #eeeded;
+    color: #000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .cadastrar:hover{
+    background-color: #534806;
+    color: #ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar{
+    background-color: #eeeded;
+    color:#000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar:hover{
+    background-color: #534806;
+    color:#ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}

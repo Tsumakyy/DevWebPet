@@ -1,0 +1,454 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Varela Round;
+}
+
+body{
+    margin-inline: auto;
+}
+
+.header{      
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 10px 100px;
+    background: #1f232c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
+
+}
+
+.logo{      
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{      
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{     
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #cfe1eb;
+    transition: 0.3s;
+}
+
+
+
+.navbar a:hover::before{    
+    width: 100%;
+
+}
+
+.header .botao button{
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.header .botao .cadastrar{
+    background-color: #eeeded;
+    color: #000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .cadastrar:hover{
+    background-color: #534806;
+    color: #ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar{
+    background-color: #eeeded;
+    color:#000000;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.header .botao .entrar:hover{
+    background-color: #534806;
+    color:#ffffff;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+
+.carrossel{      
+    height: 100vh;
+}
+
+.descricao .info-box-descricao{    
+    position: absolute;
+    left: 5%; 
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 450px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;  
+}
+
+.descricao.ativo .info-box-descricao{
+    z-index: 2;
+}
+
+.info-box-descricao .info-slider{    
+    height: inherit;
+    transition: 0.5s ease;
+}
+
+.info-slider .info-item{            
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    transform: translateY(calc(var(--i) * 100%));
+}
+
+.info-item h2{      
+    font-size: 40px;
+    line-height: 1;     
+}
+
+.info-item p{      
+    font-size: 16px;
+    margin: 15px 0 20px;   
+}
+
+.info-item .link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    background: #eeeded;
+    border: 2px solid #fff;      
+    border-radius: 40px; 
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1); 
+    font-size: 16px;
+    color: #241e1e;    
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* IMG */
+.descricao .img-box{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-box .img-slider{
+    width: inherit;
+    height: inherit;
+    transition: 0.5s ease;
+}
+
+.img-slider .img-descricao{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(calc(var(--i) * 100%));
+}
+
+.img-descricao img{
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    transform: scale(0);
+    transition: 0.5s ease;
+}
+
+.descricao.ativo .img-descricao img{
+    transform: scale(1);
+}
+
+.minifoto{      
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+.minifoto li{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    cursor: pointer; 
+    margin: 20px 0; 
+    overflow: hidden;  
+}
+
+.minifoto li.selecionado{
+    border: 3px solid #fff;
+}
+
+.minifoto li img{       
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descricao .fundoicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.descricao.ativo .fundoicon{
+    opacity: 1;
+}
+
+.descricao .fundoicon::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+.descricao:nth-child(1) .fundoicon{
+    background: #80bbc0; 
+}
+
+.descricao:nth-child(2) .fundoicon{
+    background: #fde18e;
+}
+
+.descricao:nth-child(3) .fundoicon{
+    background: #dfc8dc;
+}
+
+.descricao:nth-child(4) .fundoicon{
+    background: #97d4a9;
+}
+
+.descricao:nth-child(5) .fundoicon{
+    background: rgb(197, 155, 92);
+}
+
+
+
+.titulo1{
+    padding: 5rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+.titulo1 .gridtitulo {
+    font-size: 35px;
+    border-radius: 6px;
+}
+
+.slot img{
+    max-width: 50%;
+    display: block;
+
+}
+
+.instrucao{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.slot{
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;    
+}
+
+.slot img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.titulo{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.marcatitulo {
+    font-size: 25px;
+}
+
+.marcas{
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+}
+
+.marcas img {
+    max-height: 100%;
+    max-width: 100%;
+
+    margin-top: 5%;
+}
+
+@keyframes animacaodireita{
+    to {
+        left: -200px;
+    }
+}
+
+
+.parceria{
+    width: 200px;
+    height: 100px;
+    background-color: #fbfffc;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: animacaodireita;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item1{
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2{
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3{
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4{
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5{
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6{
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7{
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8{
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+
+footer{
+    background:#1f232c;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+.final-pag{
+    width: 100%;
+    display: flex;
+}
+
+.final-pag h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.final-pag p{
+    padding: 7px;
+    color: #fff;
+}
+
+.final-pag .esquerda {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.final-pag .direita {
+    text-align: center;
+    align-content: right;
+    margin-left: 40%;
+}
+
+
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+.bottom-bar{
+    background: #cccccc;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p{
+    color: #000000;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}

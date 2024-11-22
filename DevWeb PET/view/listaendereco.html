@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de enderecos</title>
+    <script src="../script/listaendereco.js"></script>
+    <script src="../script/logout.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/ListaEndereco.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/listaendereco.css" media="screen" />
+    <link rel="stylesheet" href="text/css" href="../css/index.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="logo">MUNDO PET</a>
+        <nav class="navbar">
+            <a href="../index.html">Início</a>
+            <a href="home.html">Home</a>
+            <a href="assinatura.html">Assinatura</a>
+            <a href="#">Dúvidas Frequentes</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <div class="botao">
+            <a href="cadastro.html">
+                <button class="cadastrar">Cadastre-se</button>
+            </a>
+            <a href="login.html">
+                <button class="entrar">Entrar</button>
+            </a>
+            <a href="../index.html">
+                <button class="entrar" onclick="logout()">Sair</button>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <section class="form">
+            <h1 id="titulo_endereco">MEUS ENDEREÇOS</h1>
+            <div class="tabela">
+              <table id="tabelaEnderecos">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>CEP</th>
+                        <th>Endereço</th>
+                        <th>Numero</th>
+                        <th>Complemento</th>
+                        <th>Atualizar</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

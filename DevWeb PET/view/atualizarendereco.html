@@ -1,0 +1,81 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Endereço</title>
+    <link rel="icon" href="img/pawprint.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/endereco.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../script/atualizarendereco.js"></script>
+    <script src="../script/logout.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">MUNDO PET</a>
+        <nav class="navbar">
+            <a href="../index.html">Início</a>
+            <a href="home.html">Home</a>
+            <a href="assinatura.html">Assinatura</a>
+            <a href="#">Dúvidas Frequentes</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <div class="botao">
+            <a href="cadastro.html">
+                <button class="cadastrar">Cadastre-se</button>
+            </a>
+            <a href="login.html">
+                <button class="entrar">Entrar</button>
+            </a>
+            <a href="../index.html">
+                <button class="entrar" onclick="logout()">Sair</button>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Atualizar Endereço</h2>
+        <form>
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" placeholder="Digite um título">
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="Digite seu CEP">
+
+            <label for="address">Endereço</label>
+            <input type="text" id="address" name="address" placeholder="Digite seu endereço">
+
+            <label for="number">Número</label>
+            <input type="text" id="number" name="number" placeholder="Digite o número">
+
+            <label for="complement">Complemento</label>
+            <input type="text" id="complement" name="complement" placeholder="Digite o complemento (opcional)">
+            <div>
+                <input type="button" value="Cadastrar" onclick="atualizaEndereco()">
+            </div>
+            
+        </form>
+    </div>  
+    <div class="walking-animals">
+        <div class="animal-container animal-container-1">
+            <img src="img/dogwalkinggif.gif" alt="Cachorro" class="animal">
+        </div>
+        <div class="animal-container animal-container-2">
+            <img src="img/catwalkinggif.gif" alt="Gato" class="animal">
+        </div>
+        <div class="animal-container animal-container-3">
+            <img src="img/birdwalkinggif.gif" alt="Pássaro" class="animal">
+        </div>
+        <div class="animal-container animal-container-4">
+            <img src="img/hamsterwalkinggif.gif" alt="Hamster" class="animal">
+        </div>
+        <div class="animal-container animal-container-5">
+            <img src="img/coelhowalkinggif.gif" alt="Coelho" class="animal">
+        </div>
+        <div class="animal-container animal-container-6">
+            <img src="img/hedgehogwalkingigf.gif" alt="Hedgehog" class="animal">
+        </div>
+    </div>
+    
+</body>
+</html>
